@@ -1,0 +1,77 @@
+<!-- Basically this is the code for form filling for the users. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issue Tracker</title>
+    <link rel="stylesheet" href = "style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <form id="form" action="/submit-query" method= "POST">
+    <header>
+        <div class="nav">
+            <div id="heading">
+                <h1>IIT Gandhinagar</h1>
+            </div>
+            <div class="logo"></div>
+        </div>
+
+    
+        <h1 id="query">Fill the Query Form</h1>
+        <br/>
+
+    <div class="filling">
+    <div class="alert">
+        <div class="n"><h4>Name<span>*</span></h4></div>
+        <span>*<p> represents Mandatory</p></span>
+    </div>
+    <input type="text" class="box" id="name" name="Name">
+   
+    <h4 class="e">Email ID<span>*</span></h4>
+    <input type="email" class="box" id="email" name="Email" spellcheck="false">
+    <!-- since everybody have their own Emailid. so there is no need to check spellings  -->
+
+    <h4 class="d">Department<span>*</span></h4>
+    <select name="Department" class="box" id="depart">
+        <option value="" disabled selected>Select Department</option>
+        <option value="CSE">CSE</option>
+        <option value="AI">AI</option>
+        <option value="EE">EE</option>
+        <option value="MECH">MECH</option>
+        <option value="CL">CL</option>
+        <option value="CE">CE</option>
+        <option value="ME">ME</option>
+    </select>
+    
+
+    <h4 class="s">Sports<span>*</span></h4>
+    <select name="Sports" class="box" id="sport">
+        <option value="" disabled selected>Select Sport</option>
+        <option value="Cricket">Cricket</option>
+        <option value="Badminton">Badminton</option>
+        <option value="Tennis">Tennis</option>
+        <option value="Table tennis">Table tennis</option>
+        <option value="Football">Football</option>
+        <option value="Volleyball">Volleyball</option>
+        <option value="Basketball">Basketball</option>
+        <option value="Squash">Squash</option>
+        <option value="Athletics">Athletics</option>
+        <option value="Swimming">Swimming</option>
+    </select>
+    
+    <h4 class="q">Query<span>*</span></h4>
+    <textarea name="Description" placeholder="Describe your Query here" class="big box" id="area"></textarea>
+    
+    
+    <button class="submitbtn" type="submit">Submit</button>
+    
+    </header>
+
+    
+
+    <script src="web.js"></script>
+</body>
+</html>

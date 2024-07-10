@@ -1,0 +1,295 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.nav{
+    display:flex;
+    justify-content: space-between;
+    background-color: #161032;
+    align-items: center;
+
+    height:65px;
+    width:100%;
+    color:lightblue;
+    z-index:5;
+    position:fixed;
+    top:0;
+   
+}
+
+.logo{
+    background-image: url(IIT_Gandhinagar_Logo.svg.png);
+    height:60px;
+    width:60px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+@media(max-width:500px){
+    #heading{
+        font-size: 0.85rem;
+    }
+
+    .logo{
+        height:50px;
+        width:50px;
+    }
+}
+
+#query{
+    text-align: center;
+    margin-top:90px;
+}
+
+.filling{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    width:550px;
+    margin:0 auto;
+    border:1px solid black;
+    align-items:flex-start;
+    height:550px;
+    padding:15px;
+
+    
+}
+
+.mandatory{
+    padding-right:40px;
+}
+
+span{
+    display:inline-block;
+    color:red
+}
+
+
+.filling h4{
+    padding-left:40px;
+}
+
+
+.alert{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:100%;
+    margin: 0 auto;
+    
+}
+
+.alert p{
+    display:inline-block
+}
+
+.box{
+    width:85%;
+    padding:10px;
+    font-size: 15px;
+    margin: 0 auto;
+}
+
+.box::placeholder{
+    font-weight: lighter;
+    color:black;
+}
+
+select.box{
+    font-weight: lighter;
+}
+.big{
+    height:150px;
+
+}
+
+.filling button{
+    background-color: lightgreen;
+    width:5rem;
+    color:black;
+    padding:0.5rem;
+    border-radius:8px;
+    font-size:15px;
+    cursor:pointer;
+    margin: 0 auto;
+    
+}
+
+.result{
+    height:150px;
+    width:60%;
+    background-color: aqua;
+    display:flex;
+    font-size:20px;
+    flex-direction: column;
+    background-color: aqua;
+    justify-content:space-evenly;
+    align-items:center;
+    margin:20px auto 0;
+    border:2px solid black;
+    
+    
+    
+}
+
+.icon{
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    border:2px solid lightgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+i{
+    font-size: 2rem;
+    color:lightgreen
+}
+
+.result button{
+    background-color: rgb(115, 210, 242);
+    width:3rem;
+    height:2rem;
+    color:black;
+    border-radius:5px;
+    font-size:15px;
+    cursor:pointer;
+}
+
+
+
+
+textarea{
+    resize:none;
+}
+
+@media (max-width: 678px) {
+    .filling {
+        width: 90%;
+        height: auto;
+    }
+
+    .logo {
+        height: 50px;
+        width: 50px;
+    }
+
+    #heading {
+        font-size: 0.85rem;
+    }
+
+    .filling h4 {
+        padding-left: 1%;
+    }
+
+    .mandatory {
+        padding-right: 5%;
+    }
+
+    .box {
+        width: 100%;
+        height: 2.5rem;
+        padding: 5px;
+    }
+
+    .big {
+        height: 130px;
+    }
+
+    .n h4{
+        padding-left:5px;
+        margin-left:0;
+       
+    }
+
+}
+
+
+
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
+th{
+    height:50px;
+}
+
+#admin{
+    text-align: center;
+    margin-top:70px;
+}
+
+table{
+    margin-top:20px;
+    width:100%;
+   
+}
+
+th{
+    background-color: #161032;
+    color:aliceblue;
+    border-color: beige;
+}
+
+td{
+    text-align:center;
+}
+
+#des-box {
+    background-color: oldlace;
+    height: 300px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed; /* Use fixed positioning */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    visibility:hidden;
+}
+
+#crossmark{
+    position:absolute;
+    right:0;
+    top:0;
+    cursor:pointer;
+    background-color: transparent;
+    border:none;
+}
+
+#des-box i {
+    color:red;
+    
+
+   
+}
+
+#description-content {
+    width: 100%;
+    height: 100%;
+    overflow:auto;
+
+   
+   
+   
+}
+
+.react {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    position: fixed;
+    bottom: 0px;
+    width: calc(100% - 40px); /* To account for padding */
+}
+
