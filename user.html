@@ -1,5 +1,3 @@
-<!-- This is for admin panel -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +6,7 @@
   <title>Login Form</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Montserrat', sans-serif;
       background-color: #f4f4f4;
       display: flex;
       justify-content: center;
@@ -18,23 +16,26 @@
     }
 
     .login-container {
-      background-color: #fff;
+      background-color: #ffffff;
       padding: 20px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       border-radius: 5px;
       width: 300px;
+     /* Adjusted margin to accommodate fixed navbar */
     }
 
     .login-container h1 {
       text-align: center;
       margin-bottom: 20px;
       font-size: 24px;
+      color: #161032; /* Dark color similar to table header */
     }
 
     .login-container label {
       display: block;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
       font-weight: bold;
+      color: #333; /* Dark text color */
     }
 
     .login-container input[type="text"],
@@ -50,16 +51,17 @@
     .login-container button {
       width: 100%;
       padding: 10px;
-      background-color: #28a745;
+      background-color: #28a745; /* Matching the table header background */
       border: none;
       border-radius: 3px;
       color: white;
       font-size: 16px;
       cursor: pointer;
+      transition: background-color 0.3s; /* Smooth transition for hover effect */
     }
 
     .login-container button:hover {
-      background-color: #218838;
+      background-color: #218838; /* Lighter shade for hover state */
     }
   </style>
 </head>

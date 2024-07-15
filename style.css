@@ -1,295 +1,184 @@
-*{
-    margin:0;
-    padding:0;
+/* styling for index.html */
+
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: 'Times New Roman', Times, serif;
+    font-family:'montserrat';
 }
 
-.nav{
-    display:flex;
+
+body {
+    background: url('academics_menu.jpg') ;
+    
+}
+
+.nav {
+    display: flex;
     justify-content: space-between;
     background-color: #161032;
     align-items: center;
-
-    height:65px;
-    width:100%;
-    color:lightblue;
-    z-index:5;
-    position:fixed;
-    top:0;
-   
+    height: 65px;
+    width: 100%;
+    color: lightblue;
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    padding: 0 20px;
 }
 
-.logo{
+.logo {
     background-image: url(IIT_Gandhinagar_Logo.svg.png);
-    height:60px;
-    width:60px;
+    height: 50px;
+    width: 50px;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    
 }
 
-@media(max-width:500px){
-    #heading{
+#query {
+    text-align: center;
+    margin-top: 90px;
+    font-size: 2rem;
+    color: #333;
+}
+
+.filling {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 80%;
+    max-width: 550px;
+    margin:0 auto;
+    padding: 20px;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.alert {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.alert h4 {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.alert p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.box {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.box:focus {
+    border-color: #38d39f;
+    background: #fff;
+    outline:none;
+}
+
+.box::placeholder {
+    font-weight: lighter;
+    color: #999;
+}
+
+textarea.box {
+    resize: none;
+    height: 150px;
+}
+
+select.box {
+    font-weight: 400; /* Ensures selected option text is bold */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+select.box:focus {
+    border-color: #38d39f; /* Ensures border color is green when focused */
+    background: #fff;
+    outline: none;
+}
+
+.filling h4 {
+    margin-bottom: 5px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.filling button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1rem;
+    background-color: #38d39f;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filling button:hover {
+    background-color: #32be8f;
+}
+
+@media (max-width: 500px) {
+    #heading {
         font-size: 0.85rem;
     }
 
-    .logo{
-        height:50px;
-        width:50px;
+    .logo {
+        height: 40px;
+        width: 40px;
+    }
+}
+@media (max-width: 768px) {
+    body {
+        background-size: contain; /* Adjusts background-size for smaller screens */
     }
 }
 
-#query{
-    text-align: center;
-    margin-top:90px;
-}
-
-.filling{
-    display: flex;
-    flex-direction: column;
-    gap:10px;
-    width:550px;
-    margin:0 auto;
-    border:1px solid black;
-    align-items:flex-start;
-    height:550px;
-    padding:15px;
-
-    
-}
-
-.mandatory{
-    padding-right:40px;
-}
-
-span{
-    display:inline-block;
-    color:red
-}
-
-
-.filling h4{
-    padding-left:40px;
-}
-
-
-.alert{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width:100%;
-    margin: 0 auto;
-    
-}
-
-.alert p{
-    display:inline-block
-}
-
-.box{
-    width:85%;
-    padding:10px;
-    font-size: 15px;
-    margin: 0 auto;
-}
-
-.box::placeholder{
-    font-weight: lighter;
-    color:black;
-}
-
-select.box{
-    font-weight: lighter;
-}
-.big{
-    height:150px;
-
-}
-
-.filling button{
-    background-color: lightgreen;
-    width:5rem;
-    color:black;
-    padding:0.5rem;
-    border-radius:8px;
-    font-size:15px;
-    cursor:pointer;
-    margin: 0 auto;
-    
-}
-
-.result{
-    height:150px;
-    width:60%;
-    background-color: aqua;
-    display:flex;
-    font-size:20px;
-    flex-direction: column;
-    background-color: aqua;
-    justify-content:space-evenly;
-    align-items:center;
-    margin:20px auto 0;
-    border:2px solid black;
-    
-    
-    
-}
-
-.icon{
-    width:50px;
-    height:50px;
-    border-radius: 50%;
-    border:2px solid lightgreen;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-i{
-    font-size: 2rem;
-    color:lightgreen
-}
-
-.result button{
-    background-color: rgb(115, 210, 242);
-    width:3rem;
-    height:2rem;
-    color:black;
-    border-radius:5px;
-    font-size:15px;
-    cursor:pointer;
-}
-
-
-
-
-textarea{
-    resize:none;
+@media(max-width:650px){
+    body{
+        background-size: cover;
+    }
 }
 
 @media (max-width: 678px) {
     .filling {
         width: 90%;
-        height: auto;
-    }
-
-    .logo {
-        height: 50px;
-        width: 50px;
-    }
-
-    #heading {
-        font-size: 0.85rem;
-    }
-
-    .filling h4 {
-        padding-left: 1%;
-    }
-
-    .mandatory {
-        padding-right: 5%;
+        padding: 15px;
     }
 
     .box {
-        width: 100%;
-        height: 2.5rem;
-        padding: 5px;
+        font-size: 0.9rem;
+        padding: 8px;
     }
 
-    .big {
+    textarea.box {
         height: 130px;
     }
 
-    .n h4{
-        padding-left:5px;
-        margin-left:0;
-       
+    .filling button {
+        font-size: 1rem;
+        padding: 8px;
     }
-
 }
 
 
 
 
-table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-  }
 
-th{
-    height:50px;
-}
-
-#admin{
-    text-align: center;
-    margin-top:70px;
-}
-
-table{
-    margin-top:20px;
-    width:100%;
-   
-}
-
-th{
-    background-color: #161032;
-    color:aliceblue;
-    border-color: beige;
-}
-
-td{
-    text-align:center;
-}
-
-#des-box {
-    background-color: oldlace;
-    height: 300px;
-    width: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed; /* Use fixed positioning */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1000;
-    visibility:hidden;
-}
-
-#crossmark{
-    position:absolute;
-    right:0;
-    top:0;
-    cursor:pointer;
-    background-color: transparent;
-    border:none;
-}
-
-#des-box i {
-    color:red;
-    
-
-   
-}
-
-#description-content {
-    width: 100%;
-    height: 100%;
-    overflow:auto;
-
-   
-   
-   
-}
-
-.react {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-    position: fixed;
-    bottom: 0px;
-    width: calc(100% - 40px); /* To account for padding */
-}
 

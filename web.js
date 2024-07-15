@@ -23,28 +23,29 @@ document.addEventListener("DOMContentLoaded", () => {
         event.preventDefault(); // Prevent the form from submitting immediately
 
         let messages = [];
-        nam.innerHTML = "Name<span>*</span>"; // Reset to default text
-        emailLabel.innerHTML = "Email ID<span>*</span>";
-        d.innerHTML = "Department<span>*</span>";
-        s.innerHTML = "Sports<span>*</span>";
-        q.innerHTML = "Query<span>*</span>";
+        nam.innerHTML = "Name"; // Reset to default text
+        emailLabel.innerHTML = "Email ID";
+        d.innerHTML = "Department";
+        s.innerHTML = "Sports";
+        q.innerHTML = "Query";
 
         //If the details are empty then the text changes to red for alerting the user
         //Else the styling and all remains like before.
         if (Name.value.trim() === "") {
-            nam.innerHTML = "Name is required<span>*</span>";
+            nam.innerHTML = "Name is required";
             nam.style.color = "red";
+            nam.style.fontWeight = "bold";
             messages.push("Name is required");
         } else {
             nam.style.color = "";
         }
 
         if (email.value.trim() === "") {
-            emailLabel.innerHTML = "Email ID is required<span>*</span>";
+            emailLabel.innerHTML = "Email ID is required";
             emailLabel.style.color = "red";
             messages.push("Email ID is required");
         } else if (!emailRegex.test(email.value.trim())) {
-            emailLabel.innerHTML = "Valid IITGN email ID is required<span>*</span>";
+            emailLabel.innerHTML = "Valid IITGN email ID is required";
             emailLabel.style.color = "red";
             messages.push("Valid IITGN email ID is required");
         } else {
@@ -52,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         if (depart.value === "") {
-            d.innerHTML = "Department is required<span>*</span>";
+            d.innerHTML = "Department is required";
             d.style.color = "red";
             messages.push("Department is required");
         } else {
@@ -60,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         if (sport.value === "") {
-            s.innerHTML = "Sport is required<span>*</span>";
+            s.innerHTML = "Sport is required";
             s.style.color = "red";
             messages.push("Sport is required");
         } else {
@@ -68,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         if (areabox.value.trim() === "") {
-            q.innerHTML = "Query description is required<span>*</span>";
+            q.innerHTML = "Query description is required";
             q.style.color = "red";
             messages.push("Query description is required");
         } else {
