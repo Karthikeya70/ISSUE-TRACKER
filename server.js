@@ -16,7 +16,7 @@ app.use(express.static(__dirname));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-mongoose.connect('mongodb://127.0.0.1:27017/data-receiver');
+mongoose.connect(process.env.MONGODB_URI);
 
 const db = mongoose.connection;
 db.once('open', () => {
