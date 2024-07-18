@@ -112,7 +112,7 @@
 
                         const row = document.querySelector(`button[data-id="${id}"]`).closest('tr');
                         row.querySelector('.status').innerText = type === 'resolved' ? 'Resolved' : 'Under Process';
-                        document.getElementById('des-box').style.visibility = 'hidden';
+                        
                     } catch (error) {
                         console.error('Error sending mail:', error);
                     }
@@ -121,11 +121,13 @@
                 //These handles the action of sending a mail based on the status.
                 document.querySelector('.resolve-btn').addEventListener('click', () => {
                     const id = document.querySelector('.resolve-btn').getAttribute('data-id');
+                    document.getElementById('des-box').style.visibility = 'hidden';
                     sendEmail(id, 'resolved');
                 });
 
                 document.querySelector('.process-btn').addEventListener('click', () => {
                     const id = document.querySelector('.process-btn').getAttribute('data-id');
+                    document.getElementById('des-box').style.visibility = 'hidden';
                     sendEmail(id, 'underProcess');
                 });
 
